@@ -1,0 +1,110 @@
+/*命名規則　BEM使用*/
+@charset "utf-8";
+
+
+html{
+  font-size: 100%;
+}
+body{
+  color: #2b2a27;
+  font-family: "cursive", serif;
+  margin: 1rem;
+}
+img{
+  max-width: 100%;
+}
+ul{
+  list-style: none;
+}
+a{
+  color: #2b2a27;
+  text-decoration: none;
+}
+
+
+.mainvisual{
+  margin: 1rem;
+}
+
+.nav-bar{
+  display: flex;
+  margin: 1rem;
+  padding-bottom: 40px;
+}
+.nav-bar .title{
+  font-size: 0.8rem;
+  font-family: "Meiryo";
+}
+.nav-bar ul{
+  display: flex;
+  margin-left: 16px;
+}
+.nav-bar li{
+  font-size: 0.75rem;
+  margin: 0 16px;
+}
+
+.container{
+  display: flex;
+  padding-bottom: 80px;
+  align-items: center;
+}
+.Concept{
+  flex-flow: column;
+}
+.img{
+  width: 50%;
+  margin: 0 1rem 0 0;
+}
+.text{
+  width: 50%;
+  margin: 0 40px;
+}
+.text__title{
+  padding-bottom: 10px;
+  font-weight: normal;
+}
+.text__subtitle{
+  padding-bottom: 30px;
+}
+
+
+#footer{
+  display: flex;
+  font-size: 0.75rem;
+  justify-content: space-between;
+}
+
+
+@media screen and (max-width: 834px){
+
+  body{
+    margin: 0;
+  }
+
+  .mainvisual{
+    width: 100%;
+    margin: 0;
+  }
+
+  .container{
+    display: inline-block;
+    justify-content: center;
+    margin: 10px;
+  }
+  .img{
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+  .text{
+    width: 100%;
+    margin: 0 auto;
+  }
+  #Work{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/*memo
