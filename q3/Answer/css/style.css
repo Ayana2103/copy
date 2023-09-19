@@ -1,0 +1,140 @@
+/*命名規則　BEM使用*/
+@charset "utf-8";
+
+html{
+  font-size: 100%;
+}
+body{
+  color: #2d2d2d;
+  font-family: 'Crimson Text', serif;
+}
+img{
+  max-width: 100%;
+  vertical-align: bottom;
+}
+ul{
+  list-style: none;
+}
+a{
+  color: #2d2d2d;
+  text-decoration: none;
+}
+
+
+/*widthをvwで指定することで、画面幅を基準にした横幅になる*/
+#mainvisual{
+  width: 90vw;
+  margin: 4% auto 0 auto;
+}
+
+
+#nav-bar{
+  width: 90vw;
+  display: flex;
+  margin: 0 auto 30px auto;
+  padding: 32px 0;
+  align-items: center;
+}
+#nav-bar ul{
+  display: flex;
+}
+#nav-bar li{
+  font-size: 0.875rem;
+  margin-right: 30px;
+}
+/*最後のliタグには margin-right を設定しない*/
+#nav-bar li:last-child{
+  margin-right: 0;
+}
+
+
+/* mainとfooterのコンテンツ幅を設定 */
+.wrapper{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.title{
+  width: 110px;
+  line-height: 1px;
+  margin-right: 50px;
+}
+.title a{
+  display: block;
+}
+.text__title{
+  margin-bottom: 4px;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+/*
+spanタグを使用しているため、「display: inline-block;」を設定することで、
+改行されてmargin-bottomが使用できるようになる
+※pタグを使用してもよいが、文章ではないため今回はspanタグを選択
+*/
+.text__subtitle{
+  display: inline-block;
+  margin-bottom: 25px;
+}
+.container{
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.container .img{
+  width: 50%;
+}
+.container .text{
+  width: 50%;
+  padding: 0.7%;
+}
+
+
+#footer{
+  display: flex;
+  font-size: 0.875rem;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+#footer .logo{
+  width: 110px;
+}
+
+
+@media screen and (max-width: 767px){
+
+  #mainvisual{
+    width: 100%;
+    margin: 0;
+  }
+  /*  heightをvhで指定することで、画面の高さを基準にした高さになる*/
+  #mainvisual img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  #nav-bar{
+    width: 100%;
+    padding: 20px 18px;
+  }
+
+  .container{
+    flex-direction: column;
+  }
+  .container .img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .container .text{
+    width: 100%;
+    padding: 0;
+  }
+  .text__title{
+    font-size: 1.25rem;
+  }
+  #Work{
+    flex-direction: column-reverse;
+  }
+}
