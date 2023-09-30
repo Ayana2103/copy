@@ -1,0 +1,258 @@
+/*命名規則　BEM使用*/
+@charset "utf-8";
+
+
+html{
+  font-size: 100%;
+}
+img{
+  max-width: 100%;
+}
+ul{
+  list-style: none;
+  font-size: 0.85rem;
+  line-height: 20px;
+}
+li::before{
+  content: " - ";
+}
+p{
+  font-size: 0.8rem;
+  line-height: 20px;
+}
+.subtitle{
+  padding-bottom: 8px;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.inner{
+  max-width: 1200px;
+  display: flex;
+  margin: 0 auto;
+}
+
+
+#header{
+  width: 100%;
+  height: 1000px;
+  background-size: cover;
+  background-image: url("https://placehold.jp/3d4070/ffffff/2500x1500.png");
+  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: 80px;
+}
+.title{
+  width: 110px;
+  text-align: end;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+#concept{
+  text-align: center;
+}
+.contents{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+  padding: 0 24px;
+}
+.contents__box{
+  position: relative;
+}
+.content img{
+  width: 100%;
+  padding: 10px;
+}
+.content img:hover{
+  opacity: 0.5 ;
+}
+.text{
+  position: absolute;
+  left: 24%;
+  top: 40%;
+  background-color: rgba(0,0,0,0.4);
+  padding: 16px 20px;
+}
+.text .subtitle{
+  color: #fff;
+}
+.subtitle__text{
+  color: #fff;
+}
+.heading{
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+#Fashion-Style{
+  text-align: center;
+  background-image: url("https://placehold.jp/2500x1500.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 640px;
+  padding-top: 80px;
+  margin-bottom: 120px;
+}
+.btn{
+  display: inline-block;
+  text-align: center;
+  border: solid 1px #000;
+  padding: 18px 60px;
+  font-size: 1rem;
+  margin: 40px 0;
+}
+.btn:hover{
+  opacity: 0.5 ;
+}
+
+
+#book{
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  padding: 56px 10px;
+}
+.img{
+  width: 50%;
+  margin: 2.5rem;
+  text-align: center;
+}
+.book__text{
+  width: 50%;
+  text-align: center;
+  padding: 1rem;
+}
+.book__text p{
+  margin-bottom: 40px;
+}
+
+
+
+.background{
+  background-color: #333;
+  color: #fff;
+  padding: 80px 0;
+}
+.footer__flex{
+  display: flex;
+  text-align: start;
+}
+#footer span{
+  display: block;
+  text-align: center;
+  margin: 24px 0;
+  font-size: 0.75rem;
+}
+
+.logo{
+  width: 50%;
+  text-align: center;
+  padding: 50px 20px;
+}
+.logo img{
+  width: 160px;
+}
+.logo img:hover{
+  opacity: 0.5 ;
+}
+.footer__text{
+  width: 50%;
+  margin: 0 40px;
+}
+.footer__text--title{
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 767px){
+
+  #header{
+    height: 120vh;
+    object-fit: cover;
+  }
+
+  .contents{
+    display: block;
+  }
+  .inner{
+    display: block;
+  }
+  .img{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .btn{
+    padding: 16px 32px;
+    font-size: 0.75rem;
+    margin: 40px 0;
+  }
+
+  #book{
+    padding: 16px 10px;
+  }
+  .book__text{
+    width: 100%;
+  }
+  .book__text p{
+    text-align: start;
+  }
+
+  .footer__flex{
+    display: block;
+  }
+  .logo{
+    width: 100%;
+    padding: 0 0 24px 0;
+  }
+  .footer__text{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/*
+@media screen and (max-width: 767px){
+
+  #mainvisual{
+    width: 100%;
+    margin: 0;
+  }
+  /*  heightをvhで指定することで、画面の高さを基準にした高さになる
+  #mainvisual img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  #nav-bar{
+    width: 100%;
+    padding: 20px 18px;
+  }
+
+  .container{
+    flex-direction: column;
+  }
+  .container .img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .container .text{
+    width: 100%;
+    padding: 0;
+  }
+  .text__title{
+    font-size: 1.25rem;
+  }
+  #Work{
+    flex-direction: column-reverse;
+  }
+}
