@@ -1,0 +1,306 @@
+/*命名規則　BEM使用*/
+@charset "utf-8";
+
+
+html{
+  font-size: 100%;
+}
+body{
+  font-family: "Arial", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 0.875rem;
+  color: #2a2a2a;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  opacity: 0.7;
+}
+img{
+  max-width: 100%;
+}
+li{
+  list-style: none;
+}
+/*中身のコンテンツの最大幅を設定し、共通で使用*/
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+.content__title{
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+/*ボタン
+「display: inline-block;」を設定してpaddingでボタンに幅と高さを持たせる。*/
+.btn{
+  display: inline-block;
+  border: solid 1px #2a2a2a;
+  font-size: 0.750rem;
+  padding: 14px 36px;
+  margin-top: 30px;
+  color: #2a2a2a;
+}
+
+
+#header{
+  height: 100vh;
+  background-size: cover;
+  background-image: url("https://placehold.jp/3d4070/ffffff/2500x1500.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  position: relative;
+  margin-bottom: 80px;
+}
+/*ロゴ
+「position: absolute;」を設定してから、top と right で位置を調整*/
+#header .header__title{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+
+#concept{
+  text-align: center;
+  margin-bottom: 80px;
+}
+#concept .contents{
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+/*テキストを上に重ねるために、
+親要素の「position」に「relative」を設定*/
+#concept .contents .content{
+  width: 49%;
+  position: relative;
+}
+/*「position: absolute;」を設定し、
+top、left、rightで位置を調整*/
+#concept .contents .content .text{
+  max-width: 290px;
+  position: absolute;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+  padding: 15px 0;
+  margin: 0 auto;
+  right: 0;
+  left: 0;
+  top: 40%;
+  font-weight: bold;
+}
+#concept .contents .content .title{
+  font-size: 1.25rem;
+  margin-bottom: 2px;
+}
+
+
+#Fashion-Style{
+  text-align: center;
+  background-image: url("https://placehold.jp/2500x1500.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 520px;
+  padding-top: 60px;
+  margin-bottom: 80px;
+}
+
+
+.book{
+  background-color: #f5f5f5;
+  padding: 60px 0;
+}
+.book .content__title{
+  margin-bottom: 40px;
+}
+.book .contents{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.book .content{
+  width: 48%;
+  text-align: center;
+}
+.book .content img{
+  width: 100%;
+}
+.book .content p{
+  margin-bottom: 30px;
+  text-align: left;
+}
+.book .content p:last-child{
+  margin-bottom: 0;
+}
+
+
+#footer{
+  background-color: #333;
+  font-size: 0.750rem;
+}
+#footer .contents{
+  display: flex;
+  color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+#footer .content{
+  width: 33%;
+  line-height: 2;
+}
+#footer .content:first-child{
+  padding: 60px 0;
+}
+#footer .content li::before{
+  content: "-";
+  margin-right: 5px;
+}
+#footer .content .title{
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#footer .copyright{
+  background-color: #fff;
+  text-align: center;
+  padding: 30px 0;
+}
+
+
+@media screen and (max-width: 896px){
+
+  #concept .contents{
+    flex-direction: column;
+  }
+  #concept .contents .content{
+    width: 100%;
+  }
+  #concept .contents .content:first-child{
+    margin-bottom: 30px;
+  }
+
+  #Fashion-Style{
+    padding-top: 35px;
+    margin-bottom: 50px;
+  }
+
+  .book{
+    padding: 30px 0;
+  }
+  .book .contents{
+    flex-direction: column;
+  }
+  .book .content{
+    width: 100%;
+  }
+  .book .content:first-child{
+    margin-bottom: 60px;
+  }
+
+  #footer .contents{
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  #footer .content{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #footer .content:first-child{
+    text-align: center;
+    padding: 0;
+  }
+}
+
+/*
+@media screen and (max-width: 767px){
+
+  #header{
+    height: 120vh;
+    object-fit: cover;
+  }
+
+  .contents{
+    display: block;
+  }
+  .inner{
+    display: block;
+  }
+  .img{
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .btn{
+    padding: 16px 32px;
+    font-size: 0.75rem;
+    margin: 40px 0;
+  }
+
+  #book{
+    padding: 16px 10px;
+  }
+  .book__text{
+    width: 100%;
+  }
+  .book__text p{
+    text-align: start;
+  }
+
+  .logo{
+    width: 100%;
+    padding: 0 0 24px 0;
+  }
+  .footer__text{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/*
+@media screen and (max-width: 767px){
+
+  #mainvisual{
+    width: 100%;
+    margin: 0;
+  }
+  /*  heightをvhで指定することで、画面の高さを基準にした高さになる
+  #mainvisual img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
+  #nav-bar{
+    width: 100%;
+    padding: 20px 18px;
+  }
+
+  .container{
+    flex-direction: column;
+  }
+  .container .img{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .container .text{
+    width: 100%;
+    padding: 0;
+  }
+  .text__title{
+    font-size: 1.25rem;
+  }
+  #Work{
+    flex-direction: column-reverse;
+  }
+}
+
+memo
+height: 100vh;
+line-height: 2;
+background-position: center top;
